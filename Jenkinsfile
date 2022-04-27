@@ -18,7 +18,7 @@ pipeline {
 
         stage('Build Docker image'){
             steps {
-                sh 'sudo chmod +x var/run/docker.sock'
+                //sh 'sudo chmod +x var/run/docker.sock'
                 sh 'docker build -t  docker1998/docker_jenkins_springboot:${BUILD_NUMBER} .'
             }
         }
