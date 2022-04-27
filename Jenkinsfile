@@ -51,6 +51,11 @@ pipeline {
                  archiveArtifacts '**/target/*.jar'
             }
         }
+        stage('Deploy to k8s') {
+            steps {
+                sshagent(['k8s']) {
+            }
+              }
     }
 }
 
