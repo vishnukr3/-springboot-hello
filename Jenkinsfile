@@ -57,11 +57,11 @@ pipeline {
                     sh "scp -o StrictHostKeyChecking=no Deployment.yaml root@34.125.45.126:/root"
                     script {
                         try {
-                            sh "ssh root@34.125.45.126 kubectl create -f ."
+                            sh "ssh root@34.125.45.126 kubectl create -f Deployment.yaml"
                         }
                         
                         catch(error) {
-                            sh "ssh root@34.125.45.126 kubectl create -f ."
+                            sh "ssh root@34.125.45.126 kubectl create -f Deployment.yaml"
                         }
                     }
                 }
