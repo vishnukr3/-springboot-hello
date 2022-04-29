@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: "vkr1998/docker_jenkins_springboot:latest"
+        image: "vkr1998/docker_jenkins_springboot:15"
         resources:
           limits:
             memory: "128Mi"
